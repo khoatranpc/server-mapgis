@@ -12,7 +12,6 @@ try {
         statistic6m.*, gadm41_vnm_1.*,ST_asText(gadm41_vnm_1.geom) as geometry
         FROM statistic6m
         JOIN gadm41_vnm_1 ON statistic6m.gid = gadm41_vnm_1.gid AND  gadm41_vnm_1.engtype_1='City'
-        ORDER BY statistic6m.numberofcar DESC, statistic6m.numberofcompleted DESC
 LIMIT 5 
         ";
     $statement = $connection->prepare($query);
