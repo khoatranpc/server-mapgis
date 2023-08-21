@@ -7,7 +7,9 @@ $username = 'postgres';
 $password = 'geoserver';
 $connection = new PDO("pgsql:host=$host;dbname=$database", $username, $password);
 
+// kinh độ
 $longitude = htmlspecialchars($_GET["longitude"]);
+// vĩ độ
 $latitude = htmlspecialchars($_GET["latitude"]);
 // find current location click
 if ($longitude && $latitude) {
